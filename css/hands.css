@@ -1,0 +1,213 @@
+/* CSS Document */
+
+.header{
+	width: 100%;
+	height:145px; 
+	display: flex;
+	flex-direction: row;
+	border-bottom: #cccccc solid 0.5px;
+}
+.left-logo{
+	margin-left: 70px;
+	margin-top: 20px;
+	width: 152px;
+	height: 102px;
+}
+.searchbox{
+	display: flex;
+	flex-direction: row;
+	margin-left: 200px;
+	margin-top: 55px;
+	width: 550px;
+	height: 47px;
+	border: solid #FB0004 2px;
+	text-align: center
+}
+.search-input{
+	font-family: '华文宋体';
+	font-size: 18px;
+	width: 480px;
+	height: 95%;
+	
+	border:0;
+	outline:none;
+}
+.camera{
+	margin-top: 13px;
+	margin-left: -40px;
+	width:23px;
+	height: 21px;
+	
+}
+.search-icon-box{
+	background-color: #FB0004;
+	width: 70px;
+	height: 47px;
+	position:relative;
+	right: 0px;
+	margin-left: 17px;
+	
+}
+.search-icon{
+	width: 25px;
+	height: 25px;
+	margin-top: 11px;
+}
+.language{
+	margin-left: 100px;
+	margin-top:55px ;
+}
+.head-right-logo{
+	width: 75px;
+	height: 82px;
+	margin-top: 38px;
+	margin-left: 100px;
+}
+.mid-content-box{
+	width: 100%;
+	height: 521px;
+	display: flex;
+	flex-direction:row;
+	border-bottom: #cccccc solid;
+}
+.left-type-box{
+	width: 20%;
+	height: 100%;
+	border-right: #cccccc solid;
+}
+.mid-dongtai-haibao{
+	width: 60%;
+	height: 100%;
+}
+.right-user-photo-box{
+	width: 20%;
+	height:100%;
+}
+.type-inner-box{
+	margin-top: 16px;
+	margin-left: 23px;
+	width: auto;
+}
+.img-haibao{
+	width: 100%;
+	height: 100%;
+}
+.img-haibao-status-points{
+	width: 200px;
+	height: 52px;
+	position: relative;
+	bottom: 73px;
+	left:23px;
+	display: flex;
+	flex-direction: row;
+}
+.point{
+	width: 29px;
+	height: 29px;
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	border: #000000 solid;
+}
+.login-url-box{
+	display: flex;
+	flex-direction: row;
+}
+.img-userHeadPhoto{
+	width: 75px;
+	height: 75px;
+	margin-top: 80px;
+	margin-left:100px;
+}
+.username{
+	margin-top: 30px;
+	margin-left:80px;
+	font-size: 28px;
+	font-family: '华文中宋'
+}
+.log-url{
+	font-family: '华文宋体';
+	font-size: 20px;
+	margin-left: 80px;
+}
+.reg-url{
+	font-family: '华文宋体';
+	font-size: 20px;
+	margin-left: 30px;
+}
+.logout-url{
+	font-family: '华文宋体';
+	font-size: 20px;
+	margin-left: 80px;
+	display: none;
+}
+.userhome-url{
+	font-family: '华文宋体';
+	font-size: 20px;
+	margin-left: 30px;
+	display: none;
+}
+.login-iframe{
+	width: 425px;
+	height:577px;
+	border: none;
+
+}
+/**
+登录页面部分的CSS
+作者：王云
+时间：2020 4/18
+**/
+.login-box{
+	width: 425px;
+	height:577px;
+	border: solid #cccccc;
+}
+.login-img-head{
+	width: 110px;
+	height: 110px;
+	margin-top: 75px;
+	margin-left: 152px;
+}
+.username-input-box{
+	width: 295px;
+	height: 62px;
+	margin-top: 38px;
+	margin-left: 60px;
+}
+.username-input-box input{
+	width: 100%;
+	height: 100%;
+	border-radius: 26px 26px 26px 26px;
+	background-color: #f2f2f2;
+	font-family: '等线';
+	font-size: 22px;
+}
+.password-input-box{
+	width: 295px;
+	height: 62px;
+	margin-top: 38px;
+	margin-left: 60px;
+
+}
+.password-input-box input{
+	width: 100%;
+	height: 100%;
+	border-radius: 26px 26px 26px 26px;
+	background-color: #f2f2f2;
+	font-family: '等线';
+	font-size: 22px;
+}
+.login-box button{
+	width: 140px;
+	height: 40px;
+	border-radius: 5px 5px 5px 5px;
+	margin-top: 25px;
+	margin-left: 137px;
+	background-color: #FFFFFF;
+}
+.login-jump-url{
+	margin-top: 50px;
+	margin-left: 60px;
+	font-family: '等线';
+	font-size: 18px;
+}
