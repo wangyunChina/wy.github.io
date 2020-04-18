@@ -32,3 +32,8 @@ function openloginPage(){
 	
 	window.open("login.html", "_blank", "scrollbars=yes,resizable=1,modal=false,alwaysRaised=yes,width=425px,height=577px");
 }
+function openregisterPage(){
+	
+	window.open("register.html", "_blank", "scrollbars=yes,resizable=1,modal=false,alwaysRaised=yes,width=425px,height=781px");
+}
+

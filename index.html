@@ -9,6 +9,7 @@ time 2020 4/17
 <title>汉织商城</title>
 	<link href="css/hands.css" rel="stylesheet" type="text/css"/>
 	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/vue.min.js"></script>
 	<script type="text/javascript" src="js/hans-index.js"></script>
 </head>
 
@@ -71,15 +72,73 @@ time 2020 4/17
 				汉织生活
 			</div>
 			<div class="login-url-box">
-			<a class="log-url" onclick="openloginPage()" herf="login.html">登录</a>
-			<a class="reg-url">注册</a>
-			<a class="userhome-url">个人中心</a>
-			<a class="logout-url">注销</a>	
+			<button class="log-url" onclick="openloginPage()" herf="login.html">登录</button>
+			<button class="reg-url" onclick="openregisterPage()">注册</button>
+			<button class="userhome-url">个人中心</button>
+			<button class="logout-url">注销</button>	
 			</div>
 		</div>
 	</div>
 	<!--中间海报部分结束-->
+	<div class="product-title-box">
+		<div class="product-title">汉织推荐</div>
+	</div>
+	<div class="product-box-t">
+	<div class="product_box" id="product_box">
 	
+		<div class="item-box" v-for="item in products">
+			<img :src="item.src" alt="" />
+			<div class="item-title">{{item.title}}</div>
+			<div class="item-foot-box">
+				<div class="item-price">￥{{item.price}}</div>
+				<div class="item-author">{{item.author}}</div>
+			</div>
+		</div>
+		<script>
+		new Vue(
+	{
+		el:'#product_box',
+		data:{
+			products:[
+				{src:'image/product/item1.jpg',title:'民族服饰_纯手工绣花青蓝色',price:220,author:'小飞象',id:1},
+				{src:'image/product/item2.jpg',title:'做个东西_月球灯挂壁灯家居装饰纯手工',price:15,author:'做个东西',id:2},
+				{src:'image/product/item3.jpg',title:'做个东西_流光灯床头灯家居装饰纯手工',price:166,author:'做个东西',id:3},
+				{src:'image/product/item4.jpg',title:'入云屋_水洗帆布袋秋叶系列原创',price:125,author:'入云屋',id:4},{src:'image/product/item1.jpg',title:'民族服饰_纯手工绣花青蓝色',price:220,author:'小飞象',id:5},
+				{src:'image/product/item2.jpg',title:'做个东西_月球灯挂壁灯家居装饰纯手工',price:15,author:'做个东西',id:6},
+				{src:'image/product/item3.jpg',title:'做个东西_流光灯床头灯家居装饰纯手工',price:166,author:'做个东西',id:7},
+				{src:'image/product/item4.jpg',title:'入云屋_水洗帆布袋秋叶系列原创',price:125,author:'入云屋',id:8}
+			]
+		}
+	}
+)
+		</script>
+	</div>
+		<div class="right-table-bar">
+			<img src="image/icon/头像.png" alt="个人中心" class="bar-user"/>
+			
+			<div class="bar" style="margin-top:20px; ">汉织商城</div>
+			<div class="h-line"></div>
+			<div class="bar" style="margin-top:20px; ">购物车</div>
+			<div class="h-line"></div>
+			<div class="bar" style="margin-top:20px; ">汉织社区</div>
+			<div class="h-line"></div>
+			<img src="image/icon/咨询 (1).png" style="width: 50%;margin-top:20px;margin-left: 20px"/>
+			<div class="bar" style=" ">客服</div>
+			<div class="h-line"></div>
+			<img src="image/icon/写.png" style="width: 50%;margin-top:20px;margin-left: 20px"/>
+			<div class="bar">反馈</div>
+			<div class="h-line"></div>
+			<img src="image/icon/上 (1).png" style="width: 50%;margin-top:20px;margin-left: 20px"/>
+			<div class="bar">顶部</div>
+		
+		
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-context"> 
+			咨询热线:　13668429330　中央民族大学汉织小组 版权所有 渝ICP备19013354号
+		</div>
+	</div>
 	
 </body>
 </html>

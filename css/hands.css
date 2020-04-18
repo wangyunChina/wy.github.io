@@ -68,7 +68,7 @@
 	height: 521px;
 	display: flex;
 	flex-direction:row;
-	border-bottom: #cccccc solid;
+	border-bottom: #cccccc solid
 }
 .left-type-box{
 	width: 20%;
@@ -128,30 +128,147 @@
 	font-family: '华文宋体';
 	font-size: 20px;
 	margin-left: 80px;
+	border: none;
+	background-color: #FFFFFF;
 }
 .reg-url{
 	font-family: '华文宋体';
 	font-size: 20px;
 	margin-left: 30px;
+	border: none;
+	background-color: #FFFFFF;
 }
 .logout-url{
 	font-family: '华文宋体';
 	font-size: 20px;
 	margin-left: 80px;
 	display: none;
+	border: none;
+	background-color: #FFFFFF;
 }
 .userhome-url{
 	font-family: '华文宋体';
 	font-size: 20px;
 	margin-left: 30px;
 	display: none;
-}
-.login-iframe{
-	width: 425px;
-	height:577px;
 	border: none;
+	background-color: #FFFFFF;
+}
+.product-title-box{
+	width: 100%;
+	height: 160px;
+	background-color: #f2f2f2;
+}
+.product-title{
+	position: relative;
+	width: 193px;
+	height: 58px;
+	font-family: '华文宋体';
+	font-size: 48px;
+	color: #e1251b;
+	margin-left: 40%;
+	top: 51px;
+}
+.product-box-t{
+background-color: #f7f7f7;
+width:1500px;
+height: auto;
+display: flex;
+flex-direction: row;
+}
+.product_box{
+	width:95%;;
+}
+.right-table-bar{
+	width:5%;
+	height:690px;
+	background-color: #ffffff;
+	float:right;
+	border-radius: 43px 43px 0 0;
+	margin-right: 3%;
+	/*position: fixed;*/
+}
+.bar-user {
+	width: 100%
+}
+.bar{
+	width: 50px;
+	height: 63px;
+	font-size: 23px;
+	font-family: '隶书';
+	margin-left: 13px;
+	color: #666666;
+}
+.bar:hover{
+	color:red;
+}
+.h-line{
+	width:100%;
+	height: 2px;
+	background-color: #666666
+}
+.item-box{
+	float: left;
+	margin: 5px 20px 0px 0px;
+	width: 320px;
+	height: 428px;
+	background-color: #ffffff;
+	border:0.5px outset;
+}
+.item-box img{
+	width: 191px;
+	height:191px;
+	margin-top: 48px;
+	margin-left: 65px;
+}
+.item-title{
+	width: 251px;
+	height:45px;
+	margin-top: 57px;
+	margin-left: 30px;
+	font-family: '等线';
+	font-size: 20px;
+	text-align: center;
+	overflow: hidden;
+	color: #999999;
+}
+.item-foot-box{
+	margin-top: 35px;
+	display: flex;
+	flex-direction: row;
+}
+.item-price{
+	font-family: 'cooper-black-std';
+	font-size: 20px;
+	width: auto;
+	color: #E1251B;
+	margin-left: 30px;
+}
+.item-author{
+	width: 60px;
+	height: 30px;
+	margin-left: 150px;
+	font-family: 'Arial';
+	font-size: 20px;
+	overflow: hidden;
+	color: #999999;
+}
+.footer{
+	width:100%;
+	height: 90px;
+	margin-top: 80px;
+	background-color: #D7D7D7;
 
 }
+.footer-context{
+	position: relative;
+	width:auto;
+	height: auto;
+	text-align: center;
+	top: 35px;
+}
+
+
 /**
 登录页面部分的CSS
 作者：王云
@@ -181,6 +298,8 @@
 	background-color: #f2f2f2;
 	font-family: '等线';
 	font-size: 22px;
+	border:0;
+	outline:none;
 }
 .password-input-box{
 	width: 295px;
@@ -196,6 +315,8 @@
 	background-color: #f2f2f2;
 	font-family: '等线';
 	font-size: 22px;
+	border:0;
+	outline:none;
 }
 .login-box button{
 	width: 140px;
@@ -206,6 +327,114 @@
 	background-color: #FFFFFF;
 }
 .login-jump-url{
+	margin-top: 50px;
+	margin-left: 60px;
+	font-family: '等线';
+	font-size: 18px;
+}
+/*
+注册页面部分
+时间：2020 4/18
+作者：王云
+*/
+.register-box{
+	width: 425px;
+	height:781px;
+	border: solid #cccccc;
+}
+.register-box img{
+	width: 110px;
+	height: 110px;
+	margin-top: 75px;
+	margin-left: 158px;
+}
+.phone-input-box{
+	width: 295px;
+	height: 62px;
+	margin-top: 38px;
+	margin-left: 60px;
+}
+.phone-input-box input{
+	width: 100%;
+	height: 100%;
+	border-radius: 26px 26px 26px 26px;
+	background-color: #f2f2f2;
+	font-family: '等线';
+	font-size: 22px;
+	border:0;
+	outline:none;
+}
+.send-check-button{
+	width: 140px;
+	height: 40px;
+	margin-left: 220px;
+	margin-top: 15px;
+
+}
+.send-check-button button{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+}
+.check-input-box{
+	width: 295px;
+	height: 62px;
+	margin-top: 10px;
+	margin-left: 60px;
+}
+.check-input-box input{
+	width: 100%;
+	height: 100%;
+	border-radius: 26px 26px 26px 26px;
+	background-color: #f2f2f2;
+	font-family: '等线';
+	font-size: 22px;
+	border:0;
+	outline:none;
+}
+.password1-input-box{
+	width: 295px;
+	height: 62px;
+	margin-top: 38px;
+	margin-left: 60px;
+}
+.password1-input-box input{
+	width: 100%;
+	height: 100%;
+	border-radius: 26px 26px 26px 26px;
+	background-color: #f2f2f2;
+	font-family: '等线';
+	font-size: 22px;
+	border:0;
+	outline:none;
+}
+.password2-input-box{
+	width: 295px;
+	height: 62px;
+	margin-top: 38px;
+	margin-left: 60px;
+	
+}
+.password2-input-box input{
+	width: 100%;
+	height: 100%;
+	border-radius: 26px 26px 26px 26px;
+	background-color: #f2f2f2;
+	font-family: '等线';
+	font-size: 22px;
+	border:0;
+	outline:none;
+}
+.register-submit-button{
+	width: 140px;
+	height: 40px;
+	border-radius: 5px 5px 5px 5px;
+	margin-top: 25px;
+	margin-left: 137px;
+	background-color: #FFFFFF;
+}
+.register-jump-url{
 	margin-top: 50px;
 	margin-left: 60px;
 	font-family: '等线';
