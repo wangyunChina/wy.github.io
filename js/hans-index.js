@@ -9,14 +9,14 @@ setInterval(function(){
 				index=i%3;
 				$("#img-haibao1").attr('src',arr[index]);
 				for(var j=0;j<point.length;j++)
-					{	if(j==index)
+					{	
+						if(j==index)
 						$(point[j]).css({"background-color":'#999999'});
 					 	else
 						$(point[j]).css({"background-color":'#FFFFFF'});	
 						}
 				i++;
 			},3000);
-		
 function changeimg(index){
 				
 				$("#img-haibao1").attr('src',arr[index]);
@@ -27,13 +27,32 @@ function changeimg(index){
 						$(point[j]).css({"background-color":'#FFFFFF'});	
 						}
 				i++;
-			}
+			}		
 function openloginPage(){
 	
-	window.open("login.html", "_blank", "scrollbars=yes,resizable=1,modal=false,alwaysRaised=yes,width=425px,height=577px");
+	$(".loginpage").show();
 }
 function openregisterPage(){
+	$(".regpage").show();
+}
+setInterval(function(){
 	
-	window.open("register.html", "_blank", "scrollbars=yes,resizable=1,modal=false,alwaysRaised=yes,width=425px,height=781px");
+},3000)
+function setlogStatus(){
+	
+	var username=$.cookie("handsUsername")
+		console.log(username);
+		if(username.length!=0)
+			{
+				console.log(username.length);
+				$("#index_username").text(username);
+				$(".log-url").hide();
+				$(".reg-url").hide();
+				$(".userhome-url").show();
+				$(".logout-url").show();
+				
+			}	
 }
 
+
+			
