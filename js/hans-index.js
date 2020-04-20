@@ -42,7 +42,7 @@ function setlogStatus(){
 	
 	var username=$.cookie("handsUsername")
 		console.log(username);
-		if(username.length!=0)
+		if(username!=null&&username.length!=0)
 			{
 				console.log(username.length);
 				$("#index_username").text(username);

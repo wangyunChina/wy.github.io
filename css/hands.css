@@ -1,5 +1,10 @@
 /* CSS Document */
-
+a{
+	color:#666666;text-decoration: none
+}
+a:hover{
+	color:red;
+}
 .header{
 	width: 100%;
 	height:145px; 
@@ -439,4 +444,82 @@ flex-direction: row;
 	margin-left: 60px;
 	font-family: '等线';
 	font-size: 18px;
+}
+/*社区页面css开始
+时间：2020 4/20
+作者：王云
+*/
+.community-body{
+	margin-top: 20px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	background: #f0f0f0
+}
+.community-left-aside{
+	width: 20%;
+	height: auto;
+}
+.community-mid-body{
+	width: 75%;
+}
+.bar-content{
+	width: 70%;
+	height: auto;
+	margin: 20px 10px 10px 20px;
+	background: #ffffff
+}
+.community-bar-item{
+	font-family: '隶书';
+	font-size: 28px;
+	text-align: center;
+	color:#707070;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.community-bar-item:hover{
+	color:#ff0000;
+}
+.recommend-item-box{
+	margin-top: 20px;
+	margin-left: 2%;
+	margin-bottom: 20px;
+	width: 23%;
+	height: 400px;
+	background: #FFFFFF;
+	float: left;
+}
+.item-desc{
+	display: flex;
+	flex-direction: row;
+	margin-top: 40px;
+	height: 60px;
+}
+.item-desc img{
+	border-radius: 30px;
+	margin-left: 10px;
+	height: 60px;
+	width: 60px;
+}
+.item-desc div{
+	margin-top:10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	font-family: '等线';
+	font-size: 20px;
+	color: #999999;
+	overflow: hidden;
+	height: 20px;
+	text-align: center;
+}
+.item-love{
+	width: 29px;
+	height: 29px;
+	float: right;
+	margin-right: 15px;
+}
+.recommend-item-img{
+	width: 100%;
+	height: 260px;
 }
