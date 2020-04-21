@@ -38,6 +38,7 @@ function openregisterPage(){
 setInterval(function(){
 	
 },3000)
+
 function setlogStatus(){
 	
 	var username=$.cookie("handsUsername")
@@ -53,6 +54,7 @@ function setlogStatus(){
 				
 			}	
 }
+
 
 
 			

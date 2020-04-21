@@ -30,7 +30,11 @@ function login(){
 					$.cookie("handsUsername",res.user.title,{path: '/'} );
 					console.log(res.user);
 					console.log(getCookie("handsUsername"));
-					window.location.replace("index.html?")
+					var url=$.cookie("target");
+					if(url.length!=0)
+					window.location.replace(url)
+					else
+						window.location.replace("index.html")
 					//removeCookie("handsUsername")
 				}
 				else{
