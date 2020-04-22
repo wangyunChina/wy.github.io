@@ -665,4 +665,67 @@ flex-direction: row;
 	flex-direction: row;
 	border: solid 1px #cccccc;
 }
+/*
+商品详情页开始
+Author:王云
+Date:2020 4/22
+*/
+.productinfo-body{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.productinfo-box{
+	width: 95%;
+	height: 600px;
+	display: flex;
+	flex-direction: row;
+}
+.product-img-lunbo{
+	width: 30%;
+	height: 66.7%;
+	margin-top: 100px;;
+	margin-left: 10.5%;
+}
+.product-img-lunbo-img{
+	width: 400px;
+	height: 400px;
+}
+.productinfo-desc-box
+{
+	margin-top: 100px;
+	margin-left: 12.2%;
+	width: 23.6%;
+	height: 400px;
+}
+.productinfo-title{
+	width: 100%;
+	height: 16.8%;
+	font-family: 'Arial';
+	font-size: 28px;
+	color: #333333;
+	overflow: hidden;
+}
+.productinfo-author
+{
+	font-family: 'Arial';
+	font-size: 18px;
+	color: #333333;
+	overflow: hidden;
+		display: flex;
+	flex-direction: row;
+}
+.productinfo-price
+{
+	font-family: 'Arial';
+	font-size: 18px;
+	color: #333333;
+	overflow: hidden;
+		display: flex;
+	flex-direction: row;
+}
+.productinfo-number{
+	display: flex;
+	flex-direction: row;
+}
 

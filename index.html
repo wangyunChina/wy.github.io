@@ -91,12 +91,13 @@ time 2020 4/17
 	<div class="product_box" id="product_box">
 	
 		<div class="item-box" v-for="item in products">
+			<a :href="getProductInfo(item.id)">
 			<img :src="item.src" alt="" />
 			<div class="item-title">{{item.title}}</div>
 			<div class="item-foot-box">
 				<div class="item-price">￥{{item.price}}</div>
 				<div class="item-author">{{item.author}}</div>
-			</div>
+			</div></a>
 		</div>
 		<script src="js/index-vue.js"></script>
 	</div>

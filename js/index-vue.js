@@ -11,6 +11,12 @@
 				{src:'image/product/item3.jpg',title:'做个东西_流光灯床头灯家居装饰纯手工',price:166,author:'做个东西',id:7},
 				{src:'image/product/item4.jpg',title:'入云屋_水洗帆布袋秋叶系列原创',price:125,author:'入云屋',id:8}
 			]
+		},
+		methods:{
+			getProductInfo:function(val)
+			{
+				return "productinfo.html?productid="+val;
+			}
 		}
 	}
 )

@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>商品详情</title>
+	<link href="css/hands.css" rel="stylesheet" type="text/css"/>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<div id="productinfo_body">
+			<!--头部开始-->
+			<div class="header" >
+				<div class="left-logo">
+					<div style="font-family:'华文新魏'; font-size: 48px;color: #FF0004">汉织</div>
+					<div style="font-family:'cooper-black-std';font-size: 28px;color:#FF0004">HANDS</div>
+				</div>
+				<div class="searchbox">
+					<input type="text" class="search-input">
+					<img src="image/icon/相机.png" class="camera"/>
+					<div class="search-icon-box">
+						<img src="image/icon/搜索.png" class="search-icon"/>
+					</div>
+				</div>
+				<div class="language">
+					<div>语言 | LANGUAGE</div>
+					<div style="margin-top: 15px">中文 | ENGLISH</div>
+				</div>
+
+				<img src="image/icon/二维码.png" class="head-right-logo"/>
+			</div>
+			<!--头部结束-->
+			<div class="productinfo-body" style="border: solid 1px #cccccc">
+					<div class="productinfo-box">
+						<!--商品详情页面轮播图-->
+						<div class="product-img-lunbo">
+								<img v-if="isshow" :src="img[nowindex]" class="product-img-lunbo-img">
+								<div class="img-haibao-status-points"  >
+									<div v-for="(item,index) in img">
+									<div class="point" v-if="nowindex!=index" @mouseover="goto(index)"></div>
+									<div class="point" v-if="nowindex==index" style="background-color:#999999 " @mouseover="goto(index)"></div>
+									</div>
+								</div>
+						</div>
+						<div class="productinfo-desc-box">
+								<div class="productinfo-title">
+									{{productname}}
+								</div>
+								<div class="productinfo-author" style="margin-top: 20px;">
+									作者：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{author}}
+								</div>
+								<div class="productinfo-price" style="margin-top: 20px;">
+									价格：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div style="font-family: 'Franklin Gothic';font-size: 28px;color:#ff0000">￥{{price}}</div>
+								</div>
+								<div class="errorMessage" style="height:10%;width: 100%;overflow: hidden;color: #e1251b">
+								<div v-if="isError">*{{errorMessage}}</div>
+								</div>
+								<div class="productinfo-number" style="margin-top: 20px;">
+									数量：
+									<input style="text-align: center; width: 50px; height: 20px;" type="text" v-model="number" @keyup="checkNumber()" />
+									<div>库存（{{stock}}）件 </div>
+
+								</div>
+								<div class="productinfo-option" style="height: 10%;margin-top: 120px;">
+									<input type="button" value="立即购买" style="font-size: 13px;color: #ffffff;background: #cc6666;height: 100%;width: 25.7%"/>
+									<input type="button" value="加入购物车" style="font-size: 13px;color: #ffffff;background: #cc3300;height: 100%;width: 52%;margin-left: 20%"/>
+								</div>
+						</div>
+					
+					</div>
+					<div class="right-table-bar">
+							<img src="image/icon/头像.png" alt="个人中心" class="bar-user"/>
+
+							<div class="bar" style="margin-top:20px; ">汉织商城</div>
+							<div class="h-line"></div>
+							<a onClick="loginFilter('shopcart.html')"><div class="bar" style="margin-top:20px; ">购物车</div></a>
+							<div class="h-line"></div>
+							<a href="community.html"><div class="bar" style="margin-top:20px; ">汉织社区</div></a>
+							<div class="h-line"></div>
+							<img src="image/icon/咨询 (1).png" style="width: 50%;margin-top:20px;margin-left: 20px"/>
+							<div class="bar" style=" ">客服</div>
+							<div class="h-line"></div>
+							<img src="image/icon/写.png" style="width: 50%;margin-top:20px;margin-left: 20px"/>
+							<div class="bar">反馈</div>
+							<div class="h-line"></div>
+							<img src="image/icon/上 (1).png" style="width: 50%;margin-top:20px;margin-left: 20px"/>
+							<div class="bar">顶部</div>
+		
+		
+					</div>
+			</div>
+			<div class="product-title-box">
+				<div class="product-title">更多推荐</div>
+			</div>
+			<div class="product-box-t">	
+			<div class="product_box" id="product_box">
+	
+				<div class="item-box" v-for="item in products">
+					<a :href="getProductInfo(item.id)">
+					<img :src="item.src" alt="" />
+					<div class="item-title">{{item.title}}</div>
+					<div class="item-foot-box">
+						<div class="item-price">￥{{item.price}}</div>
+						<div class="item-author">{{item.author}}</div>
+						</div></a>
+				</div>
+				<script src="js/index-vue.js"></script>
+			</div>
+		</div>
+		<div class="footer">
+		<div class="footer-context"> 
+			咨询热线:　13668429330　中央民族大学汉织小组 版权所有 渝ICP备19013354号
+		</div>
+	</div>
+			
+	</div>
+	
+	<script src="js/productinfo.js"></script>
+</body> 
+</html>
