@@ -33,6 +33,12 @@ var productinfo=new Vue(
 			}
 		},
 	methods: {
+		
+			getProductInfo:function(val)
+			{
+				return "productinfo.html?productid="+val;
+			},
+		
 		goto(index){
 					let that = this;
 					this.ifshow = false;

@@ -4,12 +4,18 @@
 <meta charset="utf-8">
 <title>注册</title>
 	<link href="css/hands.css" rel="stylesheet" type="text/css"/>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
-	<div class="register-box">
-		<img alt="点击上传头像" src="image/icon/头像.png" />
+	<div class="register-box" id="login-register">
+		<input type="file" id="photoFile" style="display: none;" onchange="upload()">
+		<img alt="点击上传头像" src="image/icon/头像.png" id="preview_photo"/>
+		<label for="photoFile">点击上传图片</label>
 		<div class="phone-input-box">
-			<input type="text" name="phonenumber" placeholder="手机(+86)"/>
+			<input type="text" name="phonenumber" v-model="username" placeholder="手机(+86)"/>
 		</div>
 		<div class="send-check-button">
 		<button>发送验证码</button>
@@ -18,17 +24,19 @@
 		<input type="text" name="checknumber" placeholder="验证码:"/>
 		</div>
 		<div class="password1-input-box">
-		<input type="password" name="password1" placeholder="密码："/>
+		<input type="password" name="password1" v-model="password" placeholder="密码："/>
 		</div>
+		<div style="text-align: center;color: red" v-if="iserror">*两次密码不一致</div>
 		<div class="password2-input-box">
-		<input type="password" name="password2" placeholder="重复密码："/>
+		<input type="password" name="password2" v-model="password1" @keyup="checkpassword()" placeholder="重复密码："/>
 		</div>
-		<button class="register-submit-button">提交</button>
+		<button class="register-submit-button" onClick="register()">提交</button>
 		<div class="login-jump-url">
 		<a href="_blank" style="color: black;text-decoration: none">收不到验证码？</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="login.html" style="color: black;text-decoration: none">已有账号</a>
 		</div>
 	</div>
+	<script src="js/register.js"></script>
 	
 </body>
 </html>

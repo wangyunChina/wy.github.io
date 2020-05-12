@@ -3,25 +3,35 @@ var ve=new Vue({
 	data:{
 		user:{},
 		loginurl:'http://localhost:8080/hands/login',
-		regurl:'',	
+		regurl:'http://localhost:8080/hands/reg',	
 		username:'',
 		password:'',
-		password1:''
+		password1:'',
+		iserror:false
 	},
 	methods:{
-	
+	checkpassword:function(){
+		if(this.password==this.password1)
+			this.iserror=false;
+		
+		else 
+			this.iserror=true;
+	}
 	
 }
 	}
 )
-	function login(){
-			var that=this;
-			var url_log='http://localhost:8180/hands/login';
+function register(){
+	var that=this;
+			var url_log='http://localhost:8180/hands/reg';
 			console.log(ve.username);
+			var headimg=$("#preview_photo").attr("src");
+	if(ve.password==ve.password1)
+		{
 			$.ajax({
 			url:url_log,
 			type:'GET',
-			data:{username:ve.username,password:ve.password},
+			data:{username:ve.username,password:ve.password,headImg:headimg},
 			dataType:'JSON',
 			headers:{
                 "Content-Type": "application/json"
@@ -31,9 +41,8 @@ var ve=new Vue({
 				if(res.result=="success"){
 					
 					$.cookie("handsUsername",res.data.username,{path: '/'} );
-					$.cookie("handsPassword",res.data.handsPassword,{path: '/'} );
+					$.cookie("handsPassword",res.data.username,{path: '/'} );
 					console.log(res.data.username);
-					console.log(res.data.handsPassword);
 					var url=$.cookie("target");
 					if(url!=undefined&&url.length!=0)
 					window.location.replace(url)
@@ -42,7 +51,8 @@ var ve=new Vue({
 					//removeCookie("handsUsername")
 				}
 				else{
-					alert("登录失败！");
+				
+					alert(res.errorMessage);
 				}
 				
 			},
@@ -50,6 +60,8 @@ var ve=new Vue({
 				console.log(res);
 			}
 			});
-			
-		}
-							 
+			}
+	else{
+		alert("两次密码不一致！")
+	}
+}

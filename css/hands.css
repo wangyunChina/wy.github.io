@@ -132,7 +132,6 @@ a:hover{
 .log-url{
 	font-family: '华文宋体';
 	font-size: 20px;
-	margin-left: 80px;
 	border: none;
 	background-color: #FFFFFF;
 }
@@ -146,7 +145,7 @@ a:hover{
 .logout-url{
 	font-family: '华文宋体';
 	font-size: 20px;
-	margin-left: 80px;
+	margin-left: 30px;
 	display: none;
 	border: none;
 	background-color: #FFFFFF;
@@ -727,5 +726,94 @@ Date:2020 4/22
 .productinfo-number{
 	display: flex;
 	flex-direction: row;
+	
 }
-
+/*
+*个人中心页面
+author：王云
+Date：2020 4/23
+*/
+#home_body{
+	width: 100%;
+	height: auto;
+}
+.chart-item-box{
+	width: 81%;
+	position: relative;
+	b
+}
+.chart-item{
+	width: 55%;
+	height: 730px;
+	position: absolute;
+	background: #cccccc;
+	border: solid 2px #6A6A6A; 
+	border-radius: 50px 50px 50px 50px;
+	box-shadow:10px 10px 5px #888888;
+}
+.user-info{
+	display: flex;
+	flex-direction: row;
+	width: 47.2%;
+	margin-left: 30.4%;
+	margin-bottom: 5%
+	
+}
+.user-info-label{
+	font-size: 28px;
+	font-family: '等线'; 
+	color:#333333;
+	width: 38.3%;
+	overflow: hidden;
+	margin-top: 2%
+}
+.user-info-value{
+	font-size: 28px;
+	font-family: '华文中宋';
+	color:#333333;
+	overflow: hidden;
+}
+.user-info-value-label{
+	font-family: '幼圆';
+	font-size: 20px;
+	width: 40%;
+	float: left;
+	border: solid 0.5px #333333;
+	border-radius:20%;
+	background: #ff6666;
+	text-align: center;
+	margin-left: 5%;
+	margin-top: 5%;
+	
+}
+.message-little-box{
+	width: 47.2%;
+	height: 78.5%;
+	margin-left: 50%;
+}
+.message-item{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	background: #f2f2f2;
+	height:17.5%; 
+	border-radius:50px;
+	margin-top: 4%;
+	
+}
+.home-left-bar{
+	width: 14%;
+	background: #ffffff;
+	height: 730px;
+}
+.home-left-bar-text{
+	font-family: '隶书';
+	font-size: 28px;
+	color: #707070;
+	margin-top: 35%;
+	margin-bottom: 10%;
+}
+@keyframes myfirst
+{
+	100%{left:100px}
+}

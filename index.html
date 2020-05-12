@@ -17,6 +17,7 @@ time 2020 4/17
 
 <body >
 	<!--头部开始-->
+	<div id="index">
 	<div class="header" >
 		<div class="left-logo">
 			<div style="font-family:'华文新魏'; font-size: 48px;color: #FF0004">汉织</div>
@@ -69,17 +70,20 @@ time 2020 4/17
 			</div>
 		</div>
 		<div class="right-user-photo-box">
-			<img src="image/icon/头像.png" class="img-userHeadPhoto">
-			<div class="username" id="index_username">
-				汉织生活
+			<img :src="user.headimg" class="img-userHeadPhoto">
+		<div>
+			<div  id="index_username" style="text-align: center;width: 100%;font-size: 28px;
+	font-family: '华文中宋'">
+				{{user.fakename}}
 			</div>
 		
-			<div class="login-url-box">
+			<div  style="text-align: center">
 			<a class="log-url"  style="color: black;text-decoration: none" href="login.html">登录</a>
 			<a class="reg-url"  style="color: black;text-decoration: none" href="register.html">注册</a>
-			<a class="userhome-url"  style="color: black;text-decoration: none">个人中心</a>
+			<a class="userhome-url" href="home.html" style="color: black;text-decoration: none">个人中心</a>
 			<a class="logout-url" style="color: black;text-decoration: none">注销</a>	
 			</div>
+		</div>
 		</div>
 	</div>
 	<!--中间海报部分结束-->
@@ -99,15 +103,15 @@ time 2020 4/17
 				<div class="item-author">{{item.author}}</div>
 			</div></a>
 		</div>
-		<script src="js/index-vue.js"></script>
+		
 	</div>
 		
-		<div class="right-table-bar">
+	<div class="right-table-bar">
 			<img src="image/icon/头像.png" alt="个人中心" class="bar-user"/>
 			
 			<div class="bar" style="margin-top:20px; ">汉织商城</div>
 			<div class="h-line"></div>
-			<a onClick="loginFilter('shopcart.html')"><div class="bar" style="margin-top:20px; ">购物车</div></a>
+			<a  href="shopcart.html" onClick="return loginFilter('shopcart.html')"><div class="bar" style="margin-top:20px; ">购物车</div></a>
 			<div class="h-line"></div>
 			<a href="community.html"><div class="bar" style="margin-top:20px; ">汉织社区</div></a>
 			<div class="h-line"></div>
@@ -130,8 +134,9 @@ time 2020 4/17
 			咨询热线:　13668429330　中央民族大学汉织小组 版权所有 渝ICP备19013354号
 		</div>
 	</div>
+	</div>
 	<script>setlogStatus()</script>
-	
+	<script src="js/index-vue.js"></script>
 	
 </body>
 </html>

@@ -38,15 +38,44 @@ function openregisterPage(){
 setInterval(function(){
 	
 },3000)
-
+function start()
+{	
+	var username=$.cookie("handsUsername");
+	var hpassword=$.cookie("handsPassword");
+	console.log(hpassword)
+	$.ajax({
+			url:"http://localhost:8180/hands/login",
+			type:'GET',
+			data:{username:username,password:hpassword},
+			dataType:'JSON',
+			headers:{
+                "Content-Type": "application/json"
+                },
+			success:function(res)
+			{	console.log(res);
+				if(res.result=="success"){
+					index.user=res.data;
+					console.log(index.user)
+				}
+				else{
+					alert(res.errorMessage);
+				}
+				
+			},
+			fail:function(res){
+				console.log(res);
+			}
+			});
+}
 function setlogStatus(){
 	
 	var username=$.cookie("handsUsername")
-		console.log(username);
+	var password=$.cookie("handsPassword")
+		console.log(password);
 		if(username!=null&&username.length!=0)
 			{
-				console.log(username.length);
-				$("#index_username").text(username);
+				
+				start();
 				$(".log-url").hide();
 				$(".reg-url").hide();
 				$(".userhome-url").show();
