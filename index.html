@@ -6,7 +6,9 @@ time 2020 4/17
 <html>
 <head>
 <meta charset="utf-8">
-<title>汉织商城</title>
+<title>呀呀英语</title>
+<linkrel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<linkrel="Bookmark" href="favicon.ico" type="image/x-icon">
 	<link href="css/hands.css" rel="stylesheet" type="text/css"/>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
@@ -20,8 +22,8 @@ time 2020 4/17
 	<div id="index">
 	<div class="header" >
 		<div class="left-logo">
-			<div style="font-family:'华文新魏'; font-size: 48px;color: #FF0004">汉织</div>
-			<div style="font-family:'cooper-black-std';font-size: 28px;color:#FF0004">HANDS</div>
+			<div style="font-family:'华文新魏'; font-size: 48px;color: #FF0004">呀呀</div>
+			<div style="font-family:'cooper-black-std';font-size: 28px;color:#FF0004">English</div>
 		</div>
 		<div class="searchbox">
 			<input type="text" class="search-input">
@@ -45,17 +47,9 @@ time 2020 4/17
 				<div class="type-inner-box">
 						<p><span style="font-family:'华文中宋 Bold', '华文中宋 Regular', '华文中宋';font-weight:700;">分类</span></p>
 						<div class="item-box">
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手工针织</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;灯具系列</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日常家居</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乐高/积木</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;背包/手袋</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;扎染/布艺</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手作食品</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;原料专区</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;民族手工艺品</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;疫情专区</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;扶贫专区</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html">首页</a></p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="secret.html">隐私政策</a></p>
+							
 						</div>
 						
 						
@@ -70,70 +64,38 @@ time 2020 4/17
 			</div>
 		</div>
 		<div class="right-user-photo-box">
-			<img :src="user.headimg" class="img-userHeadPhoto">
+			<img src="image/EnglishLogo.png" class="img-userHeadPhoto">
 		<div>
-			<div  id="index_username" style="text-align: center;width: 100%;font-size: 28px;
-	font-family: '华文中宋'">
-				{{user.fakename}}
-			</div>
 		
 			<div  style="text-align: center">
-			<a class="log-url"  style="color: black;text-decoration: none" href="login.html">登录</a>
-			<a class="reg-url"  style="color: black;text-decoration: none" href="register.html">注册</a>
-			<a class="userhome-url" href="home.html" style="color: black;text-decoration: none">个人中心</a>
-			<a class="logout-url" style="color: black;text-decoration: none">注销</a>	
+			<a class="log-url"  style="color: black;text-decoration: none" href="http://english.epie-api.top/fileservice/file/api/open/v1/file/8T1YWDEV202103281644003534APK">Android下载</a>
 			</div>
 		</div>
 		</div>
 	</div>
 	<!--中间海报部分结束-->
 	<div class="product-title-box">
-		<div class="product-title">汉织推荐</div>
+		<div class="product-title">页面展示</div>
 	</div>
 	<div class="product-box-t">
 	
 	<div class="product_box" id="product_box">
 	
 		<div class="item-box" v-for="item in products">
-			<a :href="getProductInfo(item.id)">
-			<img :src="item.src" alt="" />
-			<div class="item-title">{{item.title}}</div>
-			<div class="item-foot-box">
-				<div class="item-price">￥{{item.price}}</div>
-				<div class="item-author">{{item.author}}</div>
-			</div></a>
-		</div>
-		
-	</div>
-		
-	<div class="right-table-bar">
-			<img src="image/icon/头像.png" alt="个人中心" class="bar-user"/>
 			
-			<div class="bar" style="margin-top:20px; ">汉织商城</div>
-			<div class="h-line"></div>
-			<a  href="shopcart.html" onClick="return loginFilter('shopcart.html')"><div class="bar" style="margin-top:20px; ">购物车</div></a>
-			<div class="h-line"></div>
-			<a href="community.html"><div class="bar" style="margin-top:20px; ">汉织社区</div></a>
-			<div class="h-line"></div>
-			<img src="image/icon/咨询 (1).png" style="width: 50%;margin-top:20px;margin-left: 20px"/>
-			<div class="bar" style=" ">客服</div>
-			<div class="h-line"></div>
-			<img src="image/icon/写.png" style="width: 50%;margin-top:20px;margin-left: 20px"/>
-			<div class="bar">反馈</div>
-			<div class="h-line"></div>
-			<img src="image/icon/上 (1).png" style="width: 50%;margin-top:20px;margin-left: 20px"/>
-			<div class="bar">顶部</div>
-		
-		
+			<img :src="item.src" alt="" />
+			
+		</a>
 		</div>
 		
-	</div>
+	</div>		
 	
+
+	</div>
 	<div class="footer">
 		<div class="footer-context"> 
-			咨询热线:　13668429330　中央民族大学汉织小组 版权所有 渝ICP备19013354号
+			咨询热线:　13668429330　王云 版权所有 京ICP备2020040713号
 		</div>
-	</div>
 	</div>
 	<script>setlogStatus()</script>
 	<script src="js/index-vue.js"></script>
